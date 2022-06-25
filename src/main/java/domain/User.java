@@ -9,6 +9,12 @@ public class User {
     private String lastName;
     private List<String> addresses;
     private List<String> phoneNumbers;
+    private List<String> emails;
+
+
+    public User(){
+
+    }
 
     public User(String externalId, 
                  String firstName,
@@ -66,6 +72,5 @@ public class User {
     public void setEmails(List<String> emails) {
         this.emails = emails;
     }
-    private List<String> emails;
 
 }

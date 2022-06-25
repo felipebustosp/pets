@@ -10,7 +10,14 @@ import org.junit.Test;
 
 public class UserTest {
 
+    public static UserCreator userCreator = new UserCreator();
     User user = new User("166489229", "Felipe", "Bustos Ponce", createList("Cardenal Raul Silva Henriquez 409"), createList("56999010015"), createList("felipe.bustosp@gmail.com"));
+    User userFromFile = UserCreator.createUserFromFile("/home/felipe/Projects/pets/pets-core/src/test/data/user_data");
+
+    @Test
+    public void testUserCreator(){
+        assertNotNull(userFromFile);
+    }
 
     @Test
     public void testFirstName() {
